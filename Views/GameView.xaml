@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="testMAUI.Views.GameView"
+             Title="GameView">
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Command="{Binding RefreshDatabaseCommand}" Text="Refresh" />
+    </ContentPage.ToolbarItems>
+    
+    <ScrollView>
+        <VerticalStackLayout
+            Padding="25"
+            HorizontalOptions="Center"
+            MaximumWidthRequest="1000">
+
+            <Label
+                FontAttributes="Bold"
+                FontSize="28"
+                Text="Products" />
+
+            <RefreshView Command="{Binding RefreshDatabaseCommand}" Margin="0,25,0,0" >
+                <CollectionView ItemsSource="{Binding Games}">
+                    <CollectionView.ItemsLayout>
+                        <GridItemsLayout Orientation="Vertical" Span="{OnIdiom Desktop='2', Phone='1',Default='2'}" HorizontalItemSpacing="10" />
+                    </CollectionView.ItemsLayout>
+                    <CollectionView.EmptyView>
+                        <Label HorizontalOptions="Center" VerticalOptions="Center" FontSize="Large" Text="No games found!" />
+                    </CollectionView.EmptyView>
+                <CollectionView.ItemTemplate>
+                    <DataTemplate>
+                        <Border
+                            Margin="0,0,0,20"
+                            Stroke="Gainsboro"
+                            StrokeThickness="1">
+                            <Grid>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="100" />
+                                    <ColumnDefinition Width="*" />
+                                </Grid.ColumnDefinitions>
+
+                                <!--<Rectangle Grid.Column="0" BackgroundColor="DimGray" />-->
+                                <Image Source="{Binding GameIcon}" Style="{StaticResource GameIconStyle}" Grid.Column="0" />
+
+                                <Grid Grid.Column="1" Padding="20">
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="*" />
+                                        <ColumnDefinition Width="auto" />
+                                    </Grid.ColumnDefinitions>
+
+                                    <VerticalStackLayout Grid.Column="0">
+                                        <Label FontSize="24" Text="{Binding Name}" />
+                                        <Label FontSize="16" Text="{Binding Type2}" />
+                                        <Label
+                                            Margin="0,5,0,0"
+                                            FontAttributes="Bold"
+                                            FontSize="14"
+                                            Text="{Binding Price, StringFormat='{0} euro'}" />
+                                    </VerticalStackLayout>
+
+                                    <Button
+                                        Grid.Column="1"
+                                        Margin="10,0,0,0"
+                                        Command="{Binding AddToCartCommand}"
+                                        FontAttributes="Bold"
+                                        Text="Add to Cart" />
+                                </Grid>
+                            </Grid>
+                        </Border>
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+            </CollectionView>
+            </RefreshView>
+        
+            <ActivityIndicator IsVisible="{Binding LoadingIsBusy}" IsRunning="{Binding LoadingIsBusy}" VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand"  />
+
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>

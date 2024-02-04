@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Shell
+    x:Class="testMAUI.AppShell"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:local="clr-namespace:testMAUI"
+    xmlns:views="clr-namespace:testMAUI.Views"
+    Shell.NavBarIsVisible="False" Title="My own Steam">
+
+    <ShellContent
+        Title="MainPage"
+        ContentTemplate="{DataTemplate local:MainPage}"
+        Route="MainPage" />
+    
+    <ShellContent
+        Title="Products"
+        ContentTemplate="{DataTemplate views:GameView}"
+        Route="GameView" />
+
+    <ShellContent
+        Title="Cart"
+        ContentTemplate="{DataTemplate views:CartView}"
+        Route="CartView" />
+    
+    <ShellContent
+        Title="Inventory"
+        ContentTemplate="{DataTemplate views:InventoryView}"
+        Route="InventoryView" />
+    <ShellContent
+        Title="Test"
+        ContentTemplate="{DataTemplate views:TestView}"
+        Route="TestView" />
+
+</Shell>

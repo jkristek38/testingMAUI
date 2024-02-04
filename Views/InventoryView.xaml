@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="testMAUI.Views.InventoryView"
+             Title="InventoryView">
+    <ScrollView>
+        <VerticalStackLayout
+            Padding="25"
+            HorizontalOptions="Center"
+            MaximumWidthRequest="1000">
+
+            <Label
+                FontAttributes="Bold"
+                FontSize="28"
+                Text="Inventory" />
+
+            <CollectionView Margin="0,25,0,0" ItemsSource="{Binding Games}" SelectionMode="None">
+                <CollectionView.EmptyView>
+                    <Label HorizontalOptions="Center" VerticalOptions="Center" FontSize="Large" Text="No game purchased!" />
+                </CollectionView.EmptyView>
+                <CollectionView.ItemTemplate>
+                    <DataTemplate>
+                        <SwipeView>
+                            <SwipeView.LeftItems>
+                                <SwipeItems>
+                                    <SwipeItem Command="{Binding DetailsCommand}" Text="Details" BackgroundColor="Gold" />
+                                </SwipeItems>
+                            </SwipeView.LeftItems>
+                            <Border
+                                Margin="0,0,0,20"
+                                Stroke="Gainsboro"
+                                StrokeThickness="1">
+                                <Grid>
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="100" />
+                                        <ColumnDefinition Width="*" />
+                                    </Grid.ColumnDefinitions>
+
+                                    <Image Source="{Binding GameIcon}" Style="{StaticResource GameIconStyle}" Grid.Column="0" />
+
+                                    <Grid Grid.Column="1" Padding="20">
+                                        <Grid.ColumnDefinitions>
+                                            <ColumnDefinition Width="*" />
+                                            <ColumnDefinition Width="auto" />
+                                            <ColumnDefinition Width="auto" />
+                                        </Grid.ColumnDefinitions>
+
+                                        <VerticalStackLayout Grid.Column="0">
+                                            <Label FontSize="24" Text="{Binding Name}" />
+                                            <Label FontSize="16" Text="{Binding Type2}" />
+                                            <Label
+                                                Margin="0,5,0,0"
+                                                FontAttributes="Bold"
+                                                FontSize="14"
+                                                Text="{Binding IsRunning, StringFormat='running: {0}'}" />
+                                        </VerticalStackLayout>
+
+                                        <Button
+                                            Grid.Column="1"
+                                            Margin="10,0,0,0"
+                                            Command="{Binding StartStopCommand}"
+                                            FontAttributes="Bold"
+                                            Text="Start/Stop" />
+
+                                        <Button
+                                            Grid.Column="2"
+                                            Margin="10,0,0,0"
+                                            Command="{Binding DetailsCommand}"
+                                            FontAttributes="Bold"
+                                            Text="Details" />
+                                    </Grid>
+                                </Grid>
+                            </Border>
+                        </SwipeView>
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+            </CollectionView>
+
+            <ActivityIndicator IsVisible="{Binding LoadingIsBusy}" IsRunning="{Binding LoadingIsBusy}" VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand"  />
+
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>

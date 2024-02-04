@@ -1,0 +1,62 @@
+﻿[
+  {
+    "Name": "World of Tanks Blitz",
+    "Type": 5,
+    "Description": "its arcade and action game where players fight with tanks",
+    "Price": 0.0
+  },
+  {
+    "Name": "Hrot",
+    "Type": 5,
+    "Description": "Quake like action and horror game for people who are not easily scared",
+    "Price": 16.79
+  },
+  {
+    "Name": "Polda 3",
+    "Type": 1,
+    "Description": "Adventure game where players solve mysteries of policeman Pankrác",
+    "Price": 3.29
+  },
+  {
+    "Name": "Euro Truck Simulator 2",
+    "Type": 4,
+    "Description": "relaxing truck simulator for long winter nights",
+    "Price": 19.99
+  },
+  {
+    "Name": "The Sims™ 4",
+    "Type": 4,
+    "Description": "Life simulator, where take see life of diffrent sims. Their strugles and joy",
+    "Price": 0.0
+  },
+  {
+    "Name": "Outlast",
+    "Type": 3,
+    "Description": "Horror game with excelent story and absorbent atmosfere. You will be scared",
+    "Price": 19.5
+  },
+  {
+    "Name": "FlatOut 2",
+    "Type": 2,
+    "Description": "racing,stunts, flying drivers, destroyed cars, derby and all other  funny stuff",
+    "Price": 9.99
+  },
+  {
+    "Name": "Steel Division 2",
+    "Type": 0,
+    "Description": "Strategic simulator where you take control of single division or fight on large map in WW2",
+    "Price": 39.99
+  },
+  {
+    "Name": "Hearts of Iron IV",
+    "Type": 0,
+    "Description": "Strategic simulator where you take control of single country and fight on large map in WW2",
+    "Price": 39.99
+  },
+  {
+    "Name": "Age of Empires III: Definitive Edition",
+    "Type": 0,
+    "Description": "Strategic on american continent during colonization. Lead your contry to victory and win the New World",
+    "Price": 19.99
+  }
+]
