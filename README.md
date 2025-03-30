@@ -1,0 +1,1 @@
+testing project for .NET MAUI, Steam like program for MAUI testing and playing

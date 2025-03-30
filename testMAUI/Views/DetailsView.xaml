@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="testMAUI.Views.DetailsView"
+             Shell.PresentationMode="ModalNotAnimated"
+             Title="DetailsView">
+
+    <VerticalStackLayout Padding="20,20,20,0">
+        <Grid ColumnDefinitions="5*,5*" RowDefinitions="*,*,*,auto" Padding="10" ColumnSpacing="10" >
+            <BoxView Color="{OnPlatform Android='LightGreen', WinUI='LightBlue', iOS='LightGray', Default='LightCyan'}" Style="{StaticResource DetailViewBox}" />
+            <Frame Grid.Row="0" Grid.Column="0" CornerRadius="20" IsClippedToBounds="True" Padding="0" VerticalOptions="Center" HorizontalOptions="Center" >
+                <Image 
+                Source="{Binding Game.GameIcon}" 
+                Style="{StaticResource GameIconStyle}"
+                VerticalOptions="Center" 
+                HorizontalOptions="Center"
+                />
+            </Frame>
+            <Label 
+                Text="{Binding Game.Name}"
+                Grid.Row="1"
+                Grid.Column="0"
+                VerticalOptions="Center" 
+                HorizontalOptions="Center"
+                FontSize="Medium"
+                />
+            <Label 
+                Text="{Binding Game.Description}"
+                Grid.Row="2"
+                Grid.Column="0"
+                VerticalOptions="Center" 
+                HorizontalOptions="Start"
+                FontSize="Medium"
+                Margin="5"
+                />
+            <BoxView Color="LightYellow" Grid.Column="1" Style="{StaticResource DetailViewBox}" />
+            <Label 
+                Text="{Binding Game.IsRunning, StringFormat='running: {0}'}"
+                Grid.Row="0"
+                Grid.Column="1"
+                VerticalOptions="Center" 
+                HorizontalOptions="Start"
+                FontSize="Medium"
+                Padding="10,0,0,0"
+                />
+            <Label 
+                Text="{Binding Game.Minutes_played, StringFormat='played: {0} minutes'}"
+                Grid.Row="1"
+                Grid.Column="1"
+                VerticalOptions="Center" 
+                HorizontalOptions="Start"
+                FontSize="Medium"
+                Padding="10,0,0,0"
+                />
+            <Label 
+                Text="{Binding Game.Price, StringFormat='costed: {0} euro'}"
+                Grid.Row="2"
+                Grid.Column="1"
+                VerticalOptions="Center" 
+                HorizontalOptions="Start"
+                FontSize="Medium"
+                Padding="10,0,0,0"
+                />
+        </Grid>
+        <Button Text="Return" Command="{Binding ReturnCommand}" />
+    </VerticalStackLayout>
+</ContentPage>

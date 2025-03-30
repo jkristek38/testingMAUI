@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="testMAUI.Views.CartView"
+             Title="CartView">
+
+    <ScrollView>
+        <VerticalStackLayout
+            Padding="25"
+            HorizontalOptions="Center"
+            MaximumWidthRequest="1000">
+
+            <Label
+                FontAttributes="Bold"
+                FontSize="28"
+                Text="Cart" />
+
+            <CollectionView Margin="0,25,0,0" ItemsSource="{Binding Games}">
+                <CollectionView.EmptyView>
+                    <Label HorizontalOptions="Center" VerticalOptions="Center" FontSize="Large" Text="No game in shop!" />
+                </CollectionView.EmptyView>
+                <CollectionView.ItemTemplate>
+                    <DataTemplate>
+                        <Border
+                            Margin="0,0,0,20"
+                            Stroke="Gainsboro"
+                            StrokeThickness="1">
+                            <Border.GestureRecognizers>
+                                <TapGestureRecognizer Command="{Binding DetailsCommand}" />
+                            </Border.GestureRecognizers>
+                            <Grid>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="100" />
+                                    <ColumnDefinition Width="*" />
+                                    <ColumnDefinition Width="auto" />
+                                </Grid.ColumnDefinitions>
+
+                                <Image Source="{Binding GameIcon}" Style="{StaticResource GameIconStyle}" Grid.Column="0" />
+
+                                    <Grid Grid.Column="1" Padding="20">
+                                        <Grid.ColumnDefinitions>
+                                            <ColumnDefinition Width="*" />
+                                            <ColumnDefinition Width="auto" />
+                                        </Grid.ColumnDefinitions>
+
+                                        <VerticalStackLayout Grid.Column="0">
+                                            <Label FontSize="24" Text="{Binding Name}" />
+                                            <Label FontSize="16" Text="{Binding Type2}" />
+                                            <Label
+                                            Margin="0,5,0,0"
+                                            FontAttributes="Bold"
+                                            FontSize="14"
+                                            Text="{Binding Price, StringFormat='{0} euro'}" />
+                                        </VerticalStackLayout>
+                                    </Grid>
+                            </Grid>
+                        </Border>
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+            </CollectionView>
+
+            <HorizontalStackLayout Margin="0,5,0,0">
+                <CheckBox IsChecked="{Binding HasAgreedToTermsAndConditions}"  />
+                <Label
+                    Margin="2,0,0,0"
+                    Text="{Binding HasAgreedToTermsAndConditionsText}"
+                    VerticalOptions="Center" />
+            </HorizontalStackLayout>
+
+            <Frame>
+                <Frame.GestureRecognizers>
+                    <TapGestureRecognizer Command="{Binding LogInCommand}" />
+                </Frame.GestureRecognizers>
+                <HorizontalStackLayout Margin="0,5,0,0">
+                <CheckBox IsChecked="{Binding IsLoggedIn}" IsEnabled="False" />
+                <Label
+                    Margin="2,0,0,0"
+                    Text="{Binding IsLoggedInText}" 
+                    VerticalOptions="Center" />
+            </HorizontalStackLayout>
+            </Frame>
+            
+            <Button
+                Margin="0,25,0,0"
+                Padding="20"
+                Command="{Binding CheckoutCommand}"
+                FontAttributes="Bold"
+                Text="Checkout" />
+
+            <ActivityIndicator IsVisible="{Binding LoadingIsBusy}" IsRunning="{Binding LoadingIsBusy}" VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand"  />
+
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>

@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="testMAUI.Views.TestView"
+             Title="TestView">
+    <ScrollView Padding="0,25,0,0" HorizontalOptions="Center" MaximumWidthRequest="1000">
+        <Grid ColumnDefinitions="1*,8*,1*">
+            <VerticalStackLayout Grid.Column="1" Spacing="10">
+                <Grid ColumnDefinitions="2*,8*" BackgroundColor="LightYellow" Padding="10" RowSpacing="10" RowDefinitions="auto,auto,auto,auto,auto">
+                    <Label Text="Testing text" HorizontalOptions="Fill" VerticalOptions="Center" Grid.Column="0" Grid.Row="0" />
+                    <Editor Style="{StaticResource TestingForm}"  Grid.Row="0"  Text="{Binding TestingText}" />
+                    <Label Text="Testing number" HorizontalOptions="Fill" VerticalOptions="Center" Grid.Column="0" Grid.Row="1" />
+                    <Entry Style="{StaticResource TestingForm2}" Grid.Row="1" Text="{Binding TestingNumber}" />
+                    <Picker Style="{StaticResource TestingForm3}" ItemsSource="{Binding SelectableColors}" Grid.Row="2" SelectedItem="{Binding SelectedColor}"  />
+                    <Entry Style="{StaticResource TestingForm2}" Grid.Row="3" IsReadOnly="True" BackgroundColor="Azure" Text="{Binding TestingResult}" />
+                    <HorizontalStackLayout Grid.Row="4" Grid.Column="1" Spacing="5">
+                        <Button Text="Save" Command="{Binding SaveTestCommand}" HorizontalOptions="Start" BackgroundColor="{Binding SaveButtonColor}" />
+                        <Button Text="Edit" Command="{Binding EditCommand}" HorizontalOptions="Center" />
+                    </HorizontalStackLayout>
+                </Grid>
+                <Label  Text="Saved testing items" />
+                <CollectionView ItemsSource="{Binding Items}" Margin="0,20,0,0" SelectionMode="None"  >
+                    <CollectionView.EmptyView>
+                        <Label Text="No item saved" Padding="20,0,0,0" FontSize="Medium" />
+                    </CollectionView.EmptyView>
+                    <CollectionView.ItemsLayout>
+                        <GridItemsLayout Orientation="Vertical" Span="{OnIdiom Desktop='2', Phone='2',Default='2'}" HorizontalItemSpacing="10" VerticalItemSpacing="10" />
+                    </CollectionView.ItemsLayout>
+                    <CollectionView.ItemTemplate>
+                        <DataTemplate>
+                            <SwipeView HorizontalOptions="Center">
+                                <SwipeView.LeftItems>
+                                    <SwipeItems>
+                                        <SwipeItem Text="Details" BackgroundColor="Gold" />
+                                    </SwipeItems>
+                                </SwipeView.LeftItems>
+                                <Border Margin="0,0,0,20" Stroke="Gainsboro" StrokeThickness="1">
+                                    <HorizontalStackLayout Spacing="10">
+                                        <BoxView Style="{StaticResource TestingViewBox}" Color="{Binding Color}" Grid.Column="0" WidthRequest="100" />
+                                        <VerticalStackLayout  Margin="10,0,0,0">
+                                            <Label Text="{Binding Text}" TextColor="Red" FontSize="Medium" />
+                                            <Label Text="{Binding Number}" TextColor="Red" FontSize="Small" />
+                                        </VerticalStackLayout>
+                                    </HorizontalStackLayout>
+                                </Border>
+                            </SwipeView>
+                        </DataTemplate>
+                    </CollectionView.ItemTemplate>
+                </CollectionView>
+
+            </VerticalStackLayout>
+        </Grid>
+    </ScrollView>
+</ContentPage>

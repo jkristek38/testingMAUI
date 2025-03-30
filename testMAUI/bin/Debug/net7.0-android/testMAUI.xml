@@ -1,0 +1,273 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>testMAUI</name>
+    </assembly>
+    <members>
+        <member name="T:testMAUI.Models.Game">
+            <inheritdoc/>
+            <inheritdoc/>
+            <inheritdoc/>
+            <inheritdoc/>
+        </member>
+        <member name="P:testMAUI.Models.Game.LastPlayed">
+            <inheritdoc cref="F:testMAUI.Models.Game.lastPlayed"/>
+        </member>
+        <member name="P:testMAUI.Models.Game.IsRunning">
+            <inheritdoc cref="F:testMAUI.Models.Game.isRunning"/>
+        </member>
+        <member name="P:testMAUI.Models.Game.Name">
+            <inheritdoc cref="F:testMAUI.Models.Game.name"/>
+        </member>
+        <member name="P:testMAUI.Models.Game.Price">
+            <inheritdoc cref="F:testMAUI.Models.Game.price"/>
+        </member>
+        <member name="P:testMAUI.Models.Game.Description">
+            <inheritdoc cref="F:testMAUI.Models.Game.description"/>
+        </member>
+        <member name="F:testMAUI.Models.Game.addToCartCommand">
+            <summary>The backing field for <see cref="P:testMAUI.Models.Game.AddToCartCommand"/>.</summary>
+        </member>
+        <member name="P:testMAUI.Models.Game.AddToCartCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IRelayCommand"/> instance wrapping <see cref="M:testMAUI.Models.Game.AddToCart"/>.</summary>
+        </member>
+        <member name="F:testMAUI.Models.Game.startStopCommand">
+            <summary>The backing field for <see cref="P:testMAUI.Models.Game.StartStopCommand"/>.</summary>
+        </member>
+        <member name="P:testMAUI.Models.Game.StartStopCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IRelayCommand"/> instance wrapping <see cref="M:testMAUI.Models.Game.StartStop"/>.</summary>
+        </member>
+        <member name="F:testMAUI.Models.Game.detailsCommand">
+            <summary>The backing field for <see cref="P:testMAUI.Models.Game.DetailsCommand"/>.</summary>
+        </member>
+        <member name="P:testMAUI.Models.Game.DetailsCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand"/> instance wrapping <see cref="M:testMAUI.Models.Game.Details"/>.</summary>
+        </member>
+        <member name="T:testMAUI.ViewModels.CartViewModel">
+            <inheritdoc/>
+            <inheritdoc/>
+            <inheritdoc/>
+        </member>
+        <member name="P:testMAUI.ViewModels.CartViewModel.HasAgreedToTermsAndConditions">
+            <inheritdoc cref="F:testMAUI.ViewModels.CartViewModel._hasAgreedToTermsAndConditions"/>
+        </member>
+        <member name="P:testMAUI.ViewModels.CartViewModel.HasAgreedToTermsAndConditionsText">
+            <inheritdoc cref="F:testMAUI.ViewModels.CartViewModel._hasAgreedToTermsAndConditionsText"/>
+        </member>
+        <member name="P:testMAUI.ViewModels.CartViewModel.IsLoggedIn">
+            <inheritdoc cref="F:testMAUI.ViewModels.CartViewModel.isLoggedIn"/>
+        </member>
+        <member name="P:testMAUI.ViewModels.CartViewModel.IsLoggedInText">
+            <inheritdoc cref="F:testMAUI.ViewModels.CartViewModel.isLoggedInText"/>
+        </member>
+        <member name="F:testMAUI.ViewModels.CartViewModel.logInCommand">
+            <summary>The backing field for <see cref="P:testMAUI.ViewModels.CartViewModel.LogInCommand"/>.</summary>
+        </member>
+        <member name="P:testMAUI.ViewModels.CartViewModel.LogInCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand"/> instance wrapping <see cref="M:testMAUI.ViewModels.CartViewModel.LogIn"/>.</summary>
+        </member>
+        <member name="F:testMAUI.ViewModels.CartViewModel.checkoutCommand">
+            <summary>The backing field for <see cref="P:testMAUI.ViewModels.CartViewModel.CheckoutCommand"/>.</summary>
+        </member>
+        <member name="P:testMAUI.ViewModels.CartViewModel.CheckoutCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand"/> instance wrapping <see cref="M:testMAUI.ViewModels.CartViewModel.Checkout"/>.</summary>
+        </member>
+        <member name="T:testMAUI.ViewModels.DetailsViewModel">
+            <inheritdoc/>
+            <inheritdoc/>
+        </member>
+        <member name="P:testMAUI.ViewModels.DetailsViewModel.Game">
+            <inheritdoc cref="F:testMAUI.ViewModels.DetailsViewModel.game"/>
+        </member>
+        <member name="F:testMAUI.ViewModels.DetailsViewModel.returnCommand">
+            <summary>The backing field for <see cref="P:testMAUI.ViewModels.DetailsViewModel.ReturnCommand"/>.</summary>
+        </member>
+        <member name="P:testMAUI.ViewModels.DetailsViewModel.ReturnCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand"/> instance wrapping <see cref="M:testMAUI.ViewModels.DetailsViewModel.Return"/>.</summary>
+        </member>
+        <member name="T:testMAUI.ViewModels.LoginViewModel">
+            <inheritdoc/>
+            <inheritdoc/>
+            <inheritdoc/>
+        </member>
+        <member name="P:testMAUI.ViewModels.LoginViewModel.EntryName">
+            <inheritdoc cref="F:testMAUI.ViewModels.LoginViewModel.entryName"/>
+        </member>
+        <member name="P:testMAUI.ViewModels.LoginViewModel.EntryPassword">
+            <inheritdoc cref="F:testMAUI.ViewModels.LoginViewModel.entryPassword"/>
+        </member>
+        <member name="P:testMAUI.ViewModels.LoginViewModel.LoginButtonBackColor">
+            <inheritdoc cref="F:testMAUI.ViewModels.LoginViewModel.loginButtonBackColor"/>
+        </member>
+        <member name="P:testMAUI.ViewModels.LoginViewModel.Logged">
+            <inheritdoc cref="F:testMAUI.ViewModels.LoginViewModel.logged"/>
+        </member>
+        <member name="P:testMAUI.ViewModels.LoginViewModel.LoggingButtonText">
+            <inheritdoc cref="F:testMAUI.ViewModels.LoginViewModel.loggingButtonText"/>
+        </member>
+        <member name="F:testMAUI.ViewModels.LoginViewModel.loginUserCommand">
+            <summary>The backing field for <see cref="P:testMAUI.ViewModels.LoginViewModel.LoginUserCommand"/>.</summary>
+        </member>
+        <member name="P:testMAUI.ViewModels.LoginViewModel.LoginUserCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IRelayCommand"/> instance wrapping <see cref="M:testMAUI.ViewModels.LoginViewModel.LoginUser"/>.</summary>
+        </member>
+        <member name="F:testMAUI.ViewModels.LoginViewModel.returnCommand">
+            <summary>The backing field for <see cref="P:testMAUI.ViewModels.LoginViewModel.ReturnCommand"/>.</summary>
+        </member>
+        <member name="P:testMAUI.ViewModels.LoginViewModel.ReturnCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand"/> instance wrapping <see cref="M:testMAUI.ViewModels.LoginViewModel.Return"/>.</summary>
+        </member>
+        <member name="T:CommunityToolkit.Mvvm.Messaging.__Internals.__IMessengerExtensions">
+            <summary>
+            A helper type with generated registration stubs for types implementing <see cref="T:CommunityToolkit.Mvvm.Messaging.IRecipient`1"/>.
+            </summary>
+            <inheritdoc/>
+            <inheritdoc/>
+        </member>
+        <member name="M:CommunityToolkit.Mvvm.Messaging.__Internals.__IMessengerExtensions.CreateAllMessagesRegistrator(testMAUI.ViewModels.CartViewModel)">
+            <summary>
+            Creates a message registration stub for <see cref="T:testMAUI.ViewModels.CartViewModel"/> objects.
+            </summary>
+            <param name="_">Dummy parameter, only used to disambiguate the method signature.</param>
+            <returns>A message registration stub for <see cref="T:testMAUI.ViewModels.CartViewModel"/> objects.</returns>
+        </member>
+        <member name="M:CommunityToolkit.Mvvm.Messaging.__Internals.__IMessengerExtensions.CreateAllMessagesRegistratorWithToken``1(testMAUI.ViewModels.CartViewModel)">
+            <summary>
+            Creates a message registration stub for <see cref="T:testMAUI.ViewModels.CartViewModel"/> objects.
+            </summary>
+            <typeparam name="TToken">The type of tokens that will be used to register messages.</typeparam>
+            <param name="_">Dummy parameter, only used to disambiguate the method signature.</param>
+            <returns>A message registration stub for <see cref="T:testMAUI.ViewModels.CartViewModel"/> objects.</returns>
+        </member>
+        <member name="M:CommunityToolkit.Mvvm.Messaging.__Internals.__IMessengerExtensions.CreateAllMessagesRegistrator(testMAUI.ViewModels.InventoryViewModel)">
+            <summary>
+            Creates a message registration stub for <see cref="T:testMAUI.ViewModels.InventoryViewModel"/> objects.
+            </summary>
+            <param name="_">Dummy parameter, only used to disambiguate the method signature.</param>
+            <returns>A message registration stub for <see cref="T:testMAUI.ViewModels.InventoryViewModel"/> objects.</returns>
+        </member>
+        <member name="M:CommunityToolkit.Mvvm.Messaging.__Internals.__IMessengerExtensions.CreateAllMessagesRegistratorWithToken``1(testMAUI.ViewModels.InventoryViewModel)">
+            <summary>
+            Creates a message registration stub for <see cref="T:testMAUI.ViewModels.InventoryViewModel"/> objects.
+            </summary>
+            <typeparam name="TToken">The type of tokens that will be used to register messages.</typeparam>
+            <param name="_">Dummy parameter, only used to disambiguate the method signature.</param>
+            <returns>A message registration stub for <see cref="T:testMAUI.ViewModels.InventoryViewModel"/> objects.</returns>
+        </member>
+        <member name="T:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs">
+            <summary>
+            A helper type providing cached, reusable <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instances
+            for all properties generated with <see cref="T:CommunityToolkit.Mvvm.ComponentModel.ObservablePropertyAttribute"/>.
+            </summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.LastPlayed">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "LastPlayed" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.IsRunning">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "IsRunning" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.Name">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "Name" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.Price">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "Price" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.Description">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "Description" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.HasAgreedToTermsAndConditions">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "HasAgreedToTermsAndConditions" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.HasAgreedToTermsAndConditionsText">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "HasAgreedToTermsAndConditionsText" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.IsLoggedIn">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "IsLoggedIn" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.IsLoggedInText">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "IsLoggedInText" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.Game">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "Game" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.EntryName">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "EntryName" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.EntryPassword">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "EntryPassword" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.LoginButtonBackColor">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "LoginButtonBackColor" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.Logged">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "Logged" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.LoggingButtonText">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "LoggingButtonText" generated properties.</summary>
+        </member>
+        <member name="T:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs">
+            <summary>
+            A helper type providing cached, reusable <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instances
+            for all properties generated with <see cref="T:CommunityToolkit.Mvvm.ComponentModel.ObservablePropertyAttribute"/>.
+            </summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.LastPlayed">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "LastPlayed" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.IsRunning">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "IsRunning" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.Name">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "Name" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.Price">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "Price" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.Description">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "Description" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.HasAgreedToTermsAndConditions">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "HasAgreedToTermsAndConditions" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.HasAgreedToTermsAndConditionsText">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "HasAgreedToTermsAndConditionsText" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.IsLoggedIn">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "IsLoggedIn" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.IsLoggedInText">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "IsLoggedInText" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.Game">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "Game" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.EntryName">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "EntryName" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.EntryPassword">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "EntryPassword" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.LoginButtonBackColor">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "LoginButtonBackColor" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.Logged">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "Logged" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.LoggingButtonText">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "LoggingButtonText" generated properties.</summary>
+        </member>
+        <member name="T:CommunityToolkit.Mvvm.ComponentModel.__Internals.__ObservableValidatorExtensions">
+            <summary>
+            A helper type with generated validation stubs for types deriving from <see cref="T:CommunityToolkit.Mvvm.ComponentModel.ObservableValidator"/>.
+            </summary>
+            <inheritdoc/>
+        </member>
+        <member name="M:CommunityToolkit.Mvvm.ComponentModel.__Internals.__ObservableValidatorExtensions.CreateAllPropertiesValidator(testMAUI.ViewModels.CartViewModel)">
+            <summary>
+            Creates a validation stub for <see cref="T:testMAUI.ViewModels.CartViewModel"/> objects.
+            </summary>
+            <param name="_">Dummy parameter, only used to disambiguate the method signature.</param>
+            <returns>A validation stub for <see cref="T:testMAUI.ViewModels.CartViewModel"/> objects.</returns>
+        </member>
+    </members>
+</doc>
